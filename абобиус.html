@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        body,html,.container {height:100%}
+        body {
+            background-size:100%;
+            background-image:url("./file-20180315-104645-5hja7a.avif");
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: background-size 2s ease-in;
+            
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    </head>
+<body>
+<div class="container">
+    <button class="center">click me</button>
+    <audio src="./videoplayback (1)_1.mp3"></audio>
+</div>
+<script>
+        const button = document.querySelector(".center");
+        button.addEventListener("click",function(){
+            document.body.style.backgroundSize="700%"
+            button.style.display="none"
+            setTimeout(function(){
+                document.body.style.backgroundImage="url(./229.png)"
+                document.body.style.backgroundSize="100%";
+                document.querySelector("audio").play();
+            },2000)
+        });
+    </script>
+    </body>
+</html>
